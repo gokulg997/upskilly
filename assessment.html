@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet"  type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <style>
+         *{
+             margin: 0;
+             padding: 0;
+             box-sizing: none;
+            }
+        body{
+            font-size: 10px;
+            font-family: sans-serif;
+            background-color: rgb(253, 253, 236);
+            }
+            .head{
+        height: 54px;
+    width: 100vw;
+    background: #ffffff;
+    box-shadow: 5px 10px 18px #888888;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 80% 20%;
+     }
+     #head{
+         position: absolute;
+         width: 15vw;
+         height: 50px;
+         display: flex;
+        justify-content: flex-end;
+     }
+     .documents{
+         margin-top:10vh ;
+         display: grid;
+         grid-template-columns: 10% 90%;
+         overflow: hidden;
+        
+     }
+     .burger{
+         background-color: rgb(29, 109, 65);
+         width: 60px;
+         height: inherit;
+         padding: 10px;
+         position: fixed;
+         z-index: 100;
+         cursor: pointer;
+     }
+     .burger1{
+width: 30px;
+height: 5px;
+background-color:rgba(108, 191, 124, 1.0);
+margin: 5px;
+border-radius: 10px;
+     }
+     .home{
+         background-color: lightgray;
+         width: 20vw;
+         height: inherit;
+         font-size: 3em;
+         display: none;
+          position: fixed;
+         z-index: 90; 
+     }
+     .user-list{
+        padding-top: 40px;
+     }
+     .home>.user-list>ul{
+         list-style: none;
+        
+         padding-bottom: 140px;
+         text-align: center;
+         align-items: center;
+         
+     }
+     .home>.user-list>ul>li{
+        margin-top: 100px;
+
+     }
+     .home>.user-list>ul>li:hover{
+         width: inherit;
+         height: inherit;
+         text-align: center;
+     /* background-color: rgb(29, 109, 65);
+     color: lightgreen; */
+     font-weight: 200;
+     cursor: pointer;
+    }
+    .user-module1{
+        margin-left: 11%;
+        font-size: 2em;
+    }
+    .elem1{
+        width:100%;
+        font-size: 2em;
+       margin: 10px;
+    }
+    .elem{
+font-size: 2em;
+width: 1000px;
+margin-left: 12%;
+    }
+    .profile{
+    background-color: rgba(108, 191, 124, 1.0) ;
+    color: white;
+    width: 150px;
+    height: inherit;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+position: fixed;
+z-index: 200;
+}
+.details ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+}
+        #li{
+
+            font-size: 2em;
+            color:  rgba(108, 191, 124, 1.0);
+            position: fixed;
+            z-index: 150;
+            display: none;
+            padding-top: 10vh;
+            text-align: center;
+            background-color: white;
+            width: 150px;
+    height: inherit;
+    border-radius: 25px;
+        }
+        #li>li:hover{
+           background-color:rgb(29, 109, 65);
+           color: white;
+        }
+        .info1{
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+           
+        }
+        .activa{
+            width: inherit;
+         height: inherit;
+         text-align: center;
+     background-color: rgb(29, 109, 65);
+     color: lightgreen;
+     font-weight: 200;
+     cursor: pointer;
+        }
+        .assess-not{
+            border:3px solid lightgreen ;
+            padding: 3em;
+            border-radius: 25px;
+            display: none;
+        }
+        .assess-tool{
+            border-radius:25px;
+            margin-left: 10px;
+            
+        }
+        .ques-head{
+            text-align: center;
+            background-color: rgb(29, 109, 65);
+            color: white;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+        .ques-head>h1{
+            font-size: 3em;
+            font-weight: 600;
+        }
+        .serial-port{
+            position: relative;
+            width: 60vw;
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           text-align: center;}
+    .question-portion{
+        width: 60vw;
+        position: relative;
+        height:30vh;
+        border: none;
+        outline: none;
+        background-color: white;
+        border-radius: 25px;
+        font-size: 1em;
+    }
+.ques-options{
+    width: 60vw;
+height: 30vh;
+display: grid;
+grid-template-columns:1fr 1fr;
+justify-items: center;
+align-items: center;
+background-color: lightgray;
+margin-top: 10px;
+border-radius: 25px;
+
+}
+.options{
+    width: 20vw;
+    height: 12vh;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    align-items: center;
+    border: outset 5px lightblue ;
+    padding: 3px;
+    cursor: pointer;
+}
+#assess-code{
+border: none;
+outline:none;
+outline-style: none;
+border: 2px solid rgba(108, 191, 124, 1.0);
+}.icon{
+    margin-left: 60px;
+}
+    
+     </style>
+</head>
+<body id="gokul-up">
+    <nav class="head">
+        <div class="icon"><img src="logo-dark.png" alt="upskilly" id="head"></div>
+        <div class="details">
+            <ul id="list">
+                <li><div class="profile" id="g"><p id="name1">Gokul</p></div>
+                   
+                    <ul id="li"><li>Profile</li>
+                    <li>Edit</li></ul>
+            </ul>
+        </div>
+        </nav>
+        <div class="documents">
+            <div class="user-module info">
+                <div class="burger" id="burger">
+                    <div class="burger1" id="burger1"></div>
+                    <div class="burger1" id="burger2"></div>
+                    <div class="burger1" id="burger3"></div>
+                </div>
+                <script>
+                    var click=1,click1=1;
+                    // profileinte drop down
+                    $("#g").click(function(){
+                         $("#li").toggle();
+                         
+                        
+                         if(click1%2==1){
+                            $("#list-user").css("display", "none"); 
+                           $("#content").addClass("elem");
+                           $("#content").removeClass("elem1");
+                           
+                       }
+                       else{
+                        $("#list-user").css("display", "block"); 
+                        $("#content").addClass("elem1");
+                        $("#content").removeClass("elem");
+                       }
+                       click1++;
+                    });
+
+                    $("#burger").click(function(){
+
+                        $("#list-user").toggle();
+                       if(click%2==0){
+                           $("#content").addClass("elem");
+                           $("#content").removeClass("elem1");
+                           
+                       }
+                       else{
+                        $("#content").addClass("elem1");
+                        $("#content").removeClass("elem");
+                       }
+                       click++;
+                    });
+                    function home1() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("gokul-up").innerHTML = this.responseText;
+     
+    }
+  };
+  xhttp.open("GET", "assessment.html", true);
+  xhttp.send();
+}
+            
+                   $(document).ready(function(){
+                       $(".assess-not").show();
+                       $("#plateform").hide();
+                       $("#btn1").click(function(){
+                    
+                    var ch=document.getElementById("assess-code").value;
+                    var ch1=Number(document.getElementById("assess-code").value);
+                console.log(ch);
+                      if(ch1 == 1234){
+                        $(".assess-not").hide();
+                        $("#plateform").show();
+                        var second=document.getElementById('seconds').textContent;
+                        var minute=document.getElementById('minute').textContent;
+var count=setInterval(function(){
+    second--;
+    document.getElementById('seconds').textContent=second;
+    if(second==0){
+minute--;
+second=60;
+    }
+    document.getElementById('minute').textContent=minute;
+    if(second==60 && minute==-1){
+        clearInterval(count);
+    }
+    if(second==60 && minute==-1){
+       document.body.innerHTML='<h1>Thanks for Attending the Test.<a href="main.html">Back to home</a></h1>';
+    }
+},1000);
+                      }
+                   });
+                   $(".options").click(function() { 
+                $(this).css({"background-color": "rgba(108, 191, 124, 1.0)", "color": "white"}); 
+                home1();
+               
+            }); 
+            
+
+            $(".user-member1").click(function(){
+                $(".user-member1").removeClass("activa");
+                      var iden=$(this).attr("id");
+                      console.log(iden);
+                    //   $(this).css({"background-color": "rgba(108, 191, 124, 1.0)", "color": "white"});
+                         $(this).addClass("activa");
+                  });
+            
+                  });
+                    function gokul(){
+// document.getElementById(this.id).classList.add("activa");
+// console.log(id);
+
+               }
+              
+                  
+                  
+                </script>
+                   <div class="home list-user" id="list-user">  
+                    <div class="user-list">
+                        <ul>
+                            <li class="user-member1" id="h-m" onclick="gokul(this.id)">Home</li>
+                            <li class="user-member1" id="assess" onclick="gokul(this.id)">Assessment</li>
+                            <li  class="user-member1" id="score" onclick="gokul(this.id)">Score</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="user-module1 info1" id="content">
+                <div class="assess-not" id="home">
+                    <div class="col-lg-12">
+                        <div class="notificaltion">
+                            <h1 class="promo">Hurry Up</h1>
+                            <h3 id="promo">Enter Your Assessment Code</h3>
+                            <input type="text" placeholder="Assessment code" id="assess-code">
+                            <button class="btn btn-success btn -lg" id="btn1">START -></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="assess-plat" id="plateform">
+                    <div class="col-lg-12">
+                        <div class="assess-tool">
+                            <div class="ques-head"><h1>Question No: <p id="number"></p></h1>
+                            <div class="serial-port">
+                            <div class="serial-num"><label for="">Serial No:</label><label for="serial-number" class="serial" id="serial">1234</label></div>
+                             <div class="timer" id="timer"><label for="time" id="time">TIME :&nbsp;<span id="minute">0</span>&nbsp;:&nbsp;<span id="seconds">60</span>&nbsp;Minutes</label></div>
+                            </div></div>
+                             <div class="question-portion">
+                                 <div class="que-port" id="que-port">Q1) HTML stands for?
+                                 </div>  </div> 
+                                  <div class="ques-options">
+                                      <div class="que-opt1">
+                                          <div class="options" id="opt1" >HYper text markup Language</div>
+                                      </div>
+                                      <div class="que-opt1">
+                                          <div class="options" id="opt2" >hypo text Making Language</div>
+                                      </div>
+                                      <div class="que-opt1">
+                                          <div class="options" id="opt3" >hypvco text Making Language</div>
+                                      </div>
+                                      <div class="que-opt1">
+                                          <div class="options" id="opt4" onclick="question(this.id)">hypo text Making Language</div>
+                                      </div>
+                                  </div>
+                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
